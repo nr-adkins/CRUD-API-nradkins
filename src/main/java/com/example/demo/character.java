@@ -1,11 +1,11 @@
-package com.example.demo.enity;
+package com.example.demo.entity;
 
-import jakarta.persitence;
+import jakarta.persitence.*;
 
 @Entity
 public class Character{
     @Id
-    @GeneratedValue(strategy=GeneratinType.IDENTITY)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long characterID;
 
     @Column(nullable = false)
