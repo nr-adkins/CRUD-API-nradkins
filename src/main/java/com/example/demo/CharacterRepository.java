@@ -6,6 +6,6 @@ import java.util.list;
 
 public interface CharacterRepository extends JpaRepository<Character, Long>{
     List<Character> findByUniverse( String universe);
-    List<Character> findByNameContains(String name);
+    List<Character> findByNameContaining(String name);
     
 }

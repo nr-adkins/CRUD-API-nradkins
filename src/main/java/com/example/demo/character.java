@@ -7,7 +7,7 @@ public class Character {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long characterId;  // field name matches getter/setter
+    private Long characterId;  
 
     @Column(nullable = false)
     private String name;
@@ -19,10 +19,10 @@ public class Character {
     private String universe;
     private int age;
 
-    // Default constructor
+    
     public Character() {}
 
-    // Parameterized constructor
+    
     public Character(String name, String description, String species, String universe, int age) {
         this.name = name;
         this.description = description;
