@@ -1,12 +1,13 @@
 package com.example.demo.entity;
 
-import jakarta.persitence.*;
+import jakarta.persistence.*;
 
 @Entity
-public class Character{
+public class Character {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Long characterID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long characterId;  // field name matches getter/setter
 
     @Column(nullable = false)
     private String name;
@@ -18,8 +19,10 @@ public class Character{
     private String universe;
     private int age;
 
+    // Default constructor
     public Character() {}
 
+    // Parameterized constructor
     public Character(String name, String description, String species, String universe, int age) {
         this.name = name;
         this.description = description;
@@ -27,6 +30,8 @@ public class Character{
         this.universe = universe;
         this.age = age;
     }
+
+    // Getters and setters
     public Long getCharacterId() {
         return characterId;
     }
@@ -74,6 +79,4 @@ public class Character{
     public void setAge(int age) {
         this.age = age;
     }
-
-
 }
